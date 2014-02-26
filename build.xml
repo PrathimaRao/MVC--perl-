@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="Base Javascript Aggregation" basedir="." default="">
+	<property environment="env"/>
+	<property file="build.properties"/>
+	<property name="latest-branch-build.dir" value="" />	
+		
+	<target name="minify-main-local">
+			<echo>CALLING TARGET --> minify my galleries core for local</echo>
+			<exec executable="${perl.loc}">
+				<arg line="minify.pl include.conf 'E:/INETPUB/ART/Branches/JAVASCRIPT/MVC/output/${compiledApplicationFileName}'"/>
+			</exec>
+	</target>	
+</project>
